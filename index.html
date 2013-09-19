@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html>
+	<title>&nbsp;</title>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- Make the page take the full width of the device-->
+        <meta name="viewport"  content="width=device-width, initial-scale=1.0, user-scalable=0, maximum-scale=1.0" />
+
+
+        <!-- The stylesheet -->
+        <link rel="stylesheet" href="assets/css/styles.css" />
+        <link rel="stylesheet" href="assets/touchTouch/touchTouch.css" />
+
+        <!-- Google Fonts -->
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Dancing+Script" />
+
+		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.css" />
+		<script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
+		<script  src="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
+		<script type="text/javascript" charset="utf-8" src="cordova.js"></script>	
+
+
+		<style>
+			#logo{
+				background-color: red;
+			}
+
+			#stuff{
+				background-color: orange;
+			}
+
+			#left_stuff{
+				float:left;
+				margin-top: 70px;
+			}
+
+			#right_stuff{
+				float:right;
+			}
+
+			#big_wrapper{
+				margin: 0px;
+				padding: 6%;
+				height: 100%;
+			}
+
+			#content_page2 input{
+				padding: auto;
+				margin: auto;
+			}
+
+			#content_page2 textarea{
+				height: 120px;
+				padding: auto;
+				margin: auto;
+			}
+
+			#draggable { width: 150px; height: 260px; padding: 0.5em;background-color: red; }
+
+		</style>
+		
+	<script>
+		$(function() {
+			$( "#draggable" ).draggable();
+});
+		});
+	</script>
+	</head>
+	<body>
+		<!-- Start of first page I -->
+		<div data-role="page" id="page1" data-theme="a">
+			<!-- Header -->
+			<div data-role="header">
+				<h1>Caftan.me</h1>				
+			</div>
+			<!-- /header -->
+			<!-- Content    -->
+			<div data-role="content" id="big_wrapper" >
+				<div id="logo">
+					this is the logo
+				</div>
+				<div id="stuff">
+					<div id="left_stuff">						
+						    <a href="#gall" data-transition="flow" data-role="button" data-corners="false" data-mini="true" data-theme="b">Gallery</a>
+						    <a href="#testcaf" data-role="button" data-corners="false" data-mini="true" data-theme="b">Test a caftan</a>
+						    <a href="gall.html" data-role="button" data-corners="false" data-mini="true" data-theme="b">Visit our website</a>					
+					</div>
+					<div id="right_stuff"><img src="images/small.png"></div>
+				</div>
+			</div>
+			<!-- /content -->
+			<!-- footer -->
+			<div data-role="footer" data-position="fixed" data-id="foot">
+				<div data-role="navbar">
+					<ul>			
+						<li><a href="#" data-role="button" data-theme="a" data-icon="info">About</a></li>
+						<li><a href="#page2" data-role="button" data-transition="flip" data-theme="a" data-icon="grid">Contact</a></li>			
+					</ul>
+				</div>
+			</div>
+			<!-- /footer -->
+		</div>
+		<!-- /page -->
+
+		<!-- Start of first page I -->
+		<div data-role="page" id="page2" data-theme="a">
+			<!-- Header -->
+			<div data-role="header">
+				<a data-rel="back" data-theme="a" data-icon="back">back</a>
+				<h1>Caftan.me</h1>
+				<a href="#" data-role="button" data-icon="home" data-iconpos="notext" data-inline="true"></a>	
+				<div data-role="navbar">
+					<ul>
+						<li><a href="#" data-role="button" data-theme="a" data-icon="home">Home</a></li>			
+						<li><a href="#" data-role="button" data-theme="a" data-icon="info">About</a></li>
+						<li><a href="#" data-role="button" data-theme="a" data-icon="grid">Contact</a></li>			
+					</ul>
+				</div>
+			</div>
+			<!-- /header -->
+			<!-- Content    -->
+			<div data-role="content" id="big_wrapper">
+				<h4>Writte your message:</h4>
+				<div id="content_page2">
+					<input type="text" placeholder="Email"/>
+					<input type="text" placeholder="Title"/>
+					<textarea placeholder="Message"></textarea>
+					<a href="#" data-mini="true" data-role="button">Send</a>
+				</div>	
+			</div>
+			<!-- /content -->
+			<!-- footer -->
+			<div data-role="footer" data-position="fixed" data-id="foot">
+				<h4>&copy; 2013 ProBuzzing</h4>
+			</div>
+			<!-- /footer -->
+		</div>
+		<!-- /page -->
+
+
+		<!-- Start of first page I -->
+		<div data-role="page" id="gall" data-theme="a">
+			<!-- Header -->
+			<div data-role="header">
+				<a data-rel="back" data-theme="a" data-icon="back">back</a>
+				<h1>Caftan.me</h1>
+				<div data-role="navbar">
+					<ul>
+						<li><a href="#" data-role="button" data-theme="a" data-icon="home">Home</a></li>			
+						<li><a href="#" data-role="button" data-theme="a" data-icon="info">About</a></li>
+						<li><a href="#" data-role="button" data-theme="a" data-icon="grid">Contact</a></li>			
+					</ul>
+				</div>
+			</div>
+			<!-- /header -->
+			<!-- Content    -->
+			<div data-role="content" id="big_wrapper">
+				<div id="content_page2">
+					<ul data-role="listview" data-inset="true">
+					    <li><a href="#gall-1">
+					        <img src="images/verySmall.png">
+					        <h2>Takchita</h2>
+					        <p>Takchita</p></a>
+					    </li>
+					    <li><a href="#">
+					        <img src="images/Gandoura.png">
+					        <h2>Gandoura/Abaya</h2>
+					        <p>Gandoura/Abaya</p></a>
+					    </li>
+					    <li><a href="#">
+					        <img src="images/Jalaba.png">
+					        <h2>Jalaba</h2>
+					        <p>Jalaba</p></a>
+					    </li>
+					</ul>
+				</div>	
+			</div>
+			<!-- /content -->
+			<!-- footer -->
+			<div data-role="footer" data-position="fixed" data-id="foot">
+				<h4>&copy; 2013 ProBuzzing</h4>
+			</div>
+			<!-- /footer -->
+		</div>
+		<!-- /page -->
+
+
+		<!-- Start of first page I -->
+		<div data-role="page" id="gall-1" data-theme="a">
+			<!-- Header -->
+			<div data-role="header">
+				<a data-rel="back" data-theme="a" data-icon="back">back</a>
+				<h1>Caftan.me</h1>
+				<a href="#" data-role="button" data-icon="home" data-iconpos="notext" data-inline="true"></a>
+			</div>
+			<!-- /header -->
+			<!-- Content    -->
+			<div data-role="content" id="big_wrapper">
+				<div id="content_page2">
+					<div class="thumbs">
+				        <a href="images/small-1.png" style="background-image:url('images/small-1.png')" ></a>
+				        <a href="images/small-2.png" style="background-image:url('images/small-2.png')" ></a>
+				        <a href="images/small-3.png" style="background-image:url('images/small-3.png')" ></a>
+						<a href="images/pic1.png" style="background-image:url('images/pic1.png')" ></a>
+						<a href="images/pic2.png" style="background-image:url('images/pic2.png')" ></a>
+						<a href="images/pic3.png" style="background-image:url('images/pic3.png')" ></a>
+						<a href="images/pic4.png" style="background-image:url('images/pic4.png')" ></a>
+						<a href="images/pic5.png" style="background-image:url('images/pic5.png')" ></a>
+						<a href="images/pic6.png" style="background-image:url('images/pic6.png')" ></a>
+						<a href="images/pic7.png" style="background-image:url('images/pic7.png')" ></a>
+						<a href="images/pic8.png" style="background-image:url('images/pic8.png')" ></a>
+						<a href="images/pic9.png" style="background-image:url('images/pic9.png')" ></a>
+						<a href="images/pic10.png" style="background-image:url('images/pic10.png')" ></a>
+				    </div>
+				</div>	
+			</div>
+			<!-- /content -->
+			<!-- footer -->
+			<div data-role="footer" data-position="fixed" data-id="foot">
+				<h4>&copy; 2013 ProBuzzing</h4>
+			</div>
+			<!-- /footer -->
+		</div>
+		<!-- /page -->
+
+		<!-- Start of first page I -->
+		<div data-role="page" id="testcaf" data-theme="a">
+			<!-- Header -->
+			<div data-role="header">
+				<a data-rel="back" data-theme="a" data-icon="back">back</a>
+				<h1>Caftan.me</h1>
+				<a href="#" data-role="button" data-icon="home" data-iconpos="notext" data-inline="true"></a>
+			</div>
+			<!-- /header -->
+			<!-- Content    -->
+			<div data-role="content" id="big_wrapper">
+				<div id="content_page2">
+					<div id="draggable" class="ui-widget-content">
+						<img src="images/testBouge.png"/>
+					</div>
+				</div>	
+			</div>
+			<!-- /content -->
+			<!-- footer -->
+			<div data-role="footer" data-position="fixed" data-id="foot">
+				<h4>&copy; 2013 ProBuzzing</h4>
+			</div>
+			<!-- /footer -->
+		</div>
+		<!-- /page -->
+
+
+		<!-- JavaScript includes - jQuery, turn.js and our own script.js -->
+		<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+		<script src="assets/touchTouch/touchTouch.jquery.js"></script>
+		<script src="assets/js/script.js"></script>
+
+	</body>
+</html>
