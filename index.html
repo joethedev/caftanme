@@ -5,15 +5,15 @@
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<!-- Make the page take the full width of the device-->
-        <meta name="viewport"  content="width=device-width, initial-scale=1.0, user-scalable=0, maximum-scale=1.0" />
+        	<meta name="viewport"  content="width=device-width, initial-scale=1.0, user-scalable=0, maximum-scale=1.0" />
 
-<<<<<<< HEAD
+
 		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.css" />
 		<script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
 		<script  src="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
 
 		<link href="photoswipe.css" type="text/css" rel="stylesheet" />
-        <script type="text/javascript" src="klass.min.js"></script>
+        	<script type="text/javascript" src="klass.min.js"></script>
 		<script type="text/javascript" src="code.photoswipe-3.0.5.min.js"></script>
 		
 		<script type="text/javascript" charset="utf-8" src="cordova.js"></script>	
@@ -22,132 +22,28 @@
 		<style>
 			#logo img{
 				max-width: 100%;
-=======
-
-        <!-- The stylesheet -->
-        <link rel="stylesheet" href="assets/css/styles.css" />
-        <link rel="stylesheet" href="assets/touchTouch/touchTouch.css" />
-
-        <!-- Google Fonts -->
-        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Dancing+Script" />
-
-		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.css" />
-		<script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
-		<script  src="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
-		<script type="text/javascript" charset="utf-8" src="cordova.js"></script>	
-		<script type="text/javascript" charset="utf-8">
-
-    var pictureSource;   // picture source
-    var destinationType; // sets the format of returned value
-
-    // Wait for device API libraries to load
-    //
-    document.addEventListener("deviceready",onDeviceReady,false);
-
-    // device APIs are available
-    //
-    function onDeviceReady() {
-        pictureSource=navigator.camera.PictureSourceType;
-        destinationType=navigator.camera.DestinationType;
-    }
-
-    // Called when a photo is successfully retrieved
-    //
-    function onPhotoDataSuccess(imageData) {
-      // Uncomment to view the base64-encoded image data
-      // console.log(imageData);
-
-      // Get image handle
-      //
-      var smallImage = document.getElementById('smallImage');
-
-      // Unhide image elements
-      //
-      smallImage.style.display = 'block';
-
-      // Show the captured photo
-      // The inline CSS rules are used to resize the image
-      //
-      smallImage.src = "data:image/jpeg;base64," + imageData;
-    }
-
-    // Called when a photo is successfully retrieved
-    //
-    function onPhotoURISuccess(imageURI) {
-      // Uncomment to view the image file URI
-      // console.log(imageURI);
-
-      // Get image handle
-      //
-      var largeImage = document.getElementById('largeImage');
-
-      // Unhide image elements
-      //
-      largeImage.style.display = 'block';
-
-      // Show the captured photo
-      // The inline CSS rules are used to resize the image
-      //
-      largeImage.src = imageURI;
-    }
-
-    // A button will call this function
-    //
-    function capturePhoto() {
-      // Take picture using device camera and retrieve image as base64-encoded string
-      navigator.camera.getPicture(onPhotoDataSuccess, onFail, { quality: 50,
-        destinationType: destinationType.DATA_URL });
-    }
-
-    // A button will call this function
-    //
-    function capturePhotoEdit() {
-      // Take picture using device camera, allow edit, and retrieve image as base64-encoded string
-      navigator.camera.getPicture(onPhotoDataSuccess, onFail, { quality: 20, allowEdit: true,
-        destinationType: destinationType.DATA_URL });
-    }
-
-    // A button will call this function
-    //
-    function getPhoto(source) {
-      // Retrieve image file location from specified source
-      navigator.camera.getPicture(onPhotoURISuccess, onFail, { quality: 50,
-        destinationType: destinationType.FILE_URI,
-        sourceType: source });
-    }
-
-    // Called if something bad happens.
-    //
-    function onFail(message) {
-      alert('Failed because: ' + message);
-    }
-
-    </script>
-
-
-		<style>
 			#logo{
 				background-color: red;
 			}
 
 			#stuff{
 				background-color: orange;
->>>>>>> 1dc34366147faaa7057c9705117afec323ea3d95
+
 			}
 
 			#left_stuff{
 				float:left;
-<<<<<<< HEAD
+
 				margin-top: 29px;
 				margin-left: 22px;
-=======
+
 				margin-top: 70px;
->>>>>>> 1dc34366147faaa7057c9705117afec323ea3d95
+
 			}
 
 			#right_stuff{
 				float:right;
-<<<<<<< HEAD
+
 				min-height: 237px;
 				min-width: 100px;
 				background-image: url('images/small.png');
@@ -199,19 +95,18 @@
 			    	margin-left: 64px;
 			    	margin-top: 20%;
 			  	}
-=======
->>>>>>> 1dc34366147faaa7057c9705117afec323ea3d95
+
 			}
 
 			#big_wrapper{
 				margin: 0px;
-<<<<<<< HEAD
+
 				padding: 0px;
 				padding-right: 6%;
 				padding-left: 6%;
-=======
+
 				padding: 6%;
->>>>>>> 1dc34366147faaa7057c9705117afec323ea3d95
+
 				height: 100%;
 			}
 
@@ -220,7 +115,7 @@
 				margin: auto;
 			}
 
-<<<<<<< HEAD
+
 			#gallery img{
 				height: 60px;
 				width: 60px;
@@ -239,8 +134,7 @@
 				-webkit-background-size:cover;
 			}
 
-=======
->>>>>>> 1dc34366147faaa7057c9705117afec323ea3d95
+
 			#content_page2 textarea{
 				height: 120px;
 				padding: auto;
@@ -250,8 +144,7 @@
 			#draggable { width: 150px; height: 260px; padding: 0.5em;background-color: red; }
 
 		</style>
-		
-<<<<<<< HEAD
+
 	
 		<script type="text/javascript">
   
@@ -272,7 +165,6 @@
 		</script>
 
 
->>>>>>> 1dc34366147faaa7057c9705117afec323ea3d95
 	</head>
 	<body>
 		<!-- Start of first page I -->
@@ -285,26 +177,26 @@
 			<!-- Content    -->
 			<div data-role="content" id="big_wrapper" >
 				<div id="logo">
-<<<<<<< HEAD
+
 					<img src="images/logo.png">
-=======
+
 					this is the logo
->>>>>>> 1dc34366147faaa7057c9705117afec323ea3d95
+
 				</div>
 				<div id="stuff">
 					<div id="left_stuff">						
 						    <a href="#gall" data-transition="flow" data-role="button" data-corners="false" data-mini="true" data-theme="b">Gallery</a>
 						    <a href="#testcaf" data-role="button" data-corners="false" data-mini="true" data-theme="b">Test a caftan</a>
-<<<<<<< HEAD
+
 						    <a href="gall.html" data-role="button" data-corners="false" data-mini="true" data-theme="b">Visit our website</a>
 						    <a href="#page2" data-role="button" data-corners="false" data-mini="true" data-theme="b">Contact</a>					
 					</div>
 					<div id="right_stuff"></div>
-=======
+
 						    <a href="gall.html" data-role="button" data-corners="false" data-mini="true" data-theme="b">Visit our website</a>					
 					</div>
 					<div id="right_stuff"><img src="images/small.png"></div>
->>>>>>> 1dc34366147faaa7057c9705117afec323ea3d95
+
 				</div>
 			</div>
 			<!-- /content -->
@@ -312,12 +204,12 @@
 			<div data-role="footer" data-position="fixed" data-id="foot">
 				<div data-role="navbar">
 					<ul>			
-<<<<<<< HEAD
+
 						<li><a href="#" data-role="button" data-theme="a" data-icon="info">About</a></li>		
-=======
+
 						<li><a href="#" data-role="button" data-theme="a" data-icon="info">About</a></li>
 						<li><a href="#page2" data-role="button" data-transition="flip" data-theme="a" data-icon="grid">Contact</a></li>			
->>>>>>> 1dc34366147faaa7057c9705117afec323ea3d95
+
 					</ul>
 				</div>
 			</div>
@@ -331,9 +223,9 @@
 			<div data-role="header">
 				<a data-rel="back" data-theme="a" data-icon="back">back</a>
 				<h1>Caftan.me</h1>
-<<<<<<< HEAD
+
 				<a href="#page1" data-role="button" data-icon="home" data-iconpos="notext" data-inline="true"></a>				
-=======
+
 				<a href="#" data-role="button" data-icon="home" data-iconpos="notext" data-inline="true"></a>	
 				<div data-role="navbar">
 					<ul>
@@ -342,7 +234,7 @@
 						<li><a href="#" data-role="button" data-theme="a" data-icon="grid">Contact</a></li>			
 					</ul>
 				</div>
->>>>>>> 1dc34366147faaa7057c9705117afec323ea3d95
+
 			</div>
 			<!-- /header -->
 			<!-- Content    -->
@@ -371,9 +263,9 @@
 			<div data-role="header">
 				<a data-rel="back" data-theme="a" data-icon="back">back</a>
 				<h1>Caftan.me</h1>
-<<<<<<< HEAD
+
 				<a href="#page1" data-role="button" data-icon="home" data-iconpos="notext" data-inline="true"></a>	
-=======
+
 				<div data-role="navbar">
 					<ul>
 						<li><a href="#" data-role="button" data-theme="a" data-icon="home">Home</a></li>			
@@ -381,7 +273,7 @@
 						<li><a href="#" data-role="button" data-theme="a" data-icon="grid">Contact</a></li>			
 					</ul>
 				</div>
->>>>>>> 1dc34366147faaa7057c9705117afec323ea3d95
+
 			</div>
 			<!-- /header -->
 			<!-- Content    -->
@@ -393,20 +285,20 @@
 					        <h2>Takchita</h2>
 					        <p>Takchita</p></a>
 					    </li>
-<<<<<<< HEAD
+
 					    <li><a href="#gall-2">
-=======
+
 					    <li><a href="#">
->>>>>>> 1dc34366147faaa7057c9705117afec323ea3d95
+
 					        <img src="images/Gandoura.png">
 					        <h2>Gandoura/Abaya</h2>
 					        <p>Gandoura/Abaya</p></a>
 					    </li>
-<<<<<<< HEAD
+
 					    <li><a href="#gall-3">
-=======
+
 					    <li><a href="#">
->>>>>>> 1dc34366147faaa7057c9705117afec323ea3d95
+
 					        <img src="images/Jalaba.png">
 					        <h2>Jalaba</h2>
 					        <p>Jalaba</p></a>
@@ -430,7 +322,7 @@
 			<div data-role="header">
 				<a data-rel="back" data-theme="a" data-icon="back">back</a>
 				<h1>Caftan.me</h1>
-<<<<<<< HEAD
+
 				<a href="#page1" data-role="button" data-icon="home" data-iconpos="notext" data-inline="true"></a>
 			</div>
 			<!-- /header -->
@@ -503,9 +395,9 @@
 				<a data-rel="back" data-theme="a" data-icon="back">back</a>
 				<h1>Caftan.me</h1>
 				<a href="#page1" data-role="button" data-icon="home" data-iconpos="notext" data-inline="true"></a>
-=======
+
 				<a href="#" data-role="button" data-icon="home" data-iconpos="notext" data-inline="true"></a>
->>>>>>> 1dc34366147faaa7057c9705117afec323ea3d95
+
 			</div>
 			<!-- /header -->
 			<!-- Content    -->
@@ -543,19 +435,19 @@
 			<div data-role="header">
 				<a data-rel="back" data-theme="a" data-icon="back">back</a>
 				<h1>Caftan.me</h1>
-<<<<<<< HEAD
+
 				<a href="#page1" data-role="button" data-icon="home" data-iconpos="notext" data-inline="true"></a>
-=======
+
 				<a href="#" data-role="button" data-icon="home" data-iconpos="notext" data-inline="true"></a>
->>>>>>> 1dc34366147faaa7057c9705117afec323ea3d95
+
 			</div>
 			<!-- /header -->
 			<!-- Content    -->
 			<div data-role="content" id="big_wrapper">
 				<div id="content_page2">
-<<<<<<< HEAD
+
 					<img class="shape" src="images/big-2.png" />
-=======
+
 					<button onclick="capturePhoto();">Capture Photo</button> <br>
 					    <button onclick="capturePhotoEdit();">Capture Editable Photo</button> <br>
 					    <button onclick="getPhoto(pictureSource.PHOTOLIBRARY);">From Photo Library</button><br>
@@ -563,7 +455,7 @@
 					    <img style="display:none;width:60px;height:60px;" id="smallImage" src="" />
 					    <img style="display:none;" id="largeImage" src="" />
 
->>>>>>> 1dc34366147faaa7057c9705117afec323ea3d95
+
 				</div>	
 			</div>
 			<!-- /content -->
@@ -574,19 +466,11 @@
 			<!-- /footer -->
 		</div>
 		<!-- /page -->
-<<<<<<< HEAD
-	</body>
-</html>
-=======
-		
-		
-
-
-		<!-- JavaScript includes - jQuery, turn.js and our own script.js -->
-		<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
-		<script src="assets/touchTouch/touchTouch.jquery.js"></script>
-		<script src="assets/js/script.js"></script>
 
 	</body>
 </html>
->>>>>>> 1dc34366147faaa7057c9705117afec323ea3d95
+
+	
+	</body>
+</html>
+
