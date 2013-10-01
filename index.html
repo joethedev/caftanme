@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html>
+	<title>&nbsp;</title>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- Make the page take the full width of the device-->
+        <meta name="viewport"  content="width=device-width, initial-scale=1.0, user-scalable=0, maximum-scale=1.0" />
+
+		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.css" />
+		<script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
+		<script  src="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
+
+		<link href="photoswipe.css" type="text/css" rel="stylesheet" />
+        <script type="text/javascript" src="klass.min.js"></script>
+		<script type="text/javascript" src="code.photoswipe-3.0.5.min.js"></script>
+		
+		<script src="http://code.jquery.com/ui/1.8.17/jquery-ui.min.js"></script>
+		<script src="jquery.ui.touch-punch.min.js"></script>
+
+		<script type="text/javascript" charset="utf-8" src="cordova.js"></script>	
+
+
+		<style>
+			#logo img{
+				max-width: 100%;
+			}
+
+			#left_stuff{
+				float:left;
+				margin-top: 29px;
+				margin-left: 22px;
+			}
+
+			#right_stuff{
+				float:right;
+				min-height: 237px;
+				min-width: 100px;
+				background-image: url('images/small.png');
+			}
+
+			@media screen and (max-width: 260px) {
+			  	#right_stuff {
+			    	min-height: 142px;
+					min-width: 60px;
+					background-image: url('images/xsmall.png');
+			  	}
+			  	.ui-mini .ui-btn-inner{
+			  		font-size: 10px;
+			  		padding: 0.35em 10px 0.35em;
+			  	}
+			  	#left_stuff {
+			    	margin-left: 19px;
+			    	margin-top: 10px;
+			  	}
+			}
+
+			@media screen and (min-width: 479px) {
+			  	#right_stuff {
+			    	min-height: 379px;
+					min-width: 160px;
+					background-image: url('images/large.png');
+			  	}
+			  	.ui-mini .ui-btn-inner{
+			  		font-size: 14px;
+			  		padding: 0.75em 49px 0.7em;
+			  	}
+			  	#left_stuff {
+			    	margin-left: 29px;
+			    	margin-top: 20%;
+			  	}
+			}
+
+			@media screen and (min-width: 719px) {
+			  	#right_stuff {
+			    	min-height: 580px;
+					min-width: 245px;
+					background-image: url('images/model2.png');
+			  	}
+			  	.ui-mini .ui-btn-inner{
+			  		font-size: 17px;
+			  		padding: 0.95em 80px 0.9em;
+			  	}
+			  	#left_stuff {
+			    	margin-left: 64px;
+			    	margin-top: 20%;
+			  	}
+			}
+
+			#big_wrapper{
+				margin: 0px;
+				padding: 0px;
+				padding-right: 6%;
+				padding-left: 6%;
+				height: 100%;
+			}
+
+			#content_page2 input{
+				padding: auto;
+				margin: auto;
+			}
+
+			#gallery img{
+				height: 60px;
+				width: 60px;
+				display:inline-block;
+				box-shadow:0 1px 3px rgba(0,0,0,0.5);
+				border-radius:4px;
+				margin: 4px 4px 4px;
+				position:relative;
+				text-decoration:none;
+				
+				background-position:center center;
+				background-repeat: no-repeat;
+				
+				background-size:cover;
+				-moz-background-size:cover;
+				-webkit-background-size:cover;
+			}
+
+			#content_page2 textarea{
+				height: 120px;
+				padding: auto;
+				margin: auto;
+			}
+
+			#draggable { width: 150px; height: 260px; padding: 0.5em;background-color: red; }
+
+		</style>
+		
+		<script>
+	  $(document).ready(function() {
+		$(".shape").draggable();
+	  });
+  </script>
+		<script type="text/javascript">
+  
+			(function(window, $, PhotoSwipe)
+			{
+			  	$(document).ready(function()
+			  	{
+			   		$("#gallery a").photoSwipe(
+			   		{
+			   			getToolbar: function(){
+					       	return '<div class="ps-toolbar-close" style="padding-top: 12px;">Close</div><div class="ps-toolbar-play" style="padding-top: 12px;">Play</div><div class="ps-toolbar-previous" style="padding-top: 12px;">Previous</div><div class="ps-toolbar-next" style="padding-top: 12px;">Next</div><div class="say-hi" style="padding-top: 12px;">Say Hi!</div>';
+					    },
+			    		enableMouseWheel: false,
+			    		enableKeyboard: false
+			   		});
+			  	});
+			}(window, window.jQuery, window.Code.PhotoSwipe));
+		</script>
+		<script type="text/javascript" charset="utf-8">
+
+    // Wait for PhoneGap to load
+    //
+    document.addEventListener("deviceready", onDeviceReady, false);
+
+    // PhoneGap is ready
+    //
+    function onDeviceReady() {
+
+    alert("phonegap works");
+
+    $(".shape").draggable();
+
+
+
+    }
+
+    </script>
+
+	</head>
+	<body>
+		<!-- Start of first page I -->
+		<div data-role="page" id="page1" data-theme="a">
+			<!-- Header -->
+			<div data-role="header">
+				<h1>Caftan.me</h1>				
+			</div>
+			<!-- /header -->
+			<!-- Content    -->
+			<div data-role="content" id="big_wrapper" >
+				<div id="logo">
+					<img src="images/logo.png">
+				</div>
+				<div id="stuff">
+					<div id="left_stuff">						
+						    <a href="#gall" data-transition="flow" data-role="button" data-corners="false" data-mini="true" data-theme="b">Gallery</a>
+						    <a href="#testcaf" data-role="button" data-corners="false" data-mini="true" data-theme="b">Test a caftan</a>
+						    <a href="gall.html" data-role="button" data-corners="false" data-mini="true" data-theme="b">Visit our website</a>
+						    <a href="#page2" data-role="button" data-corners="false" data-mini="true" data-theme="b">Contact</a>					
+					</div>
+					<div id="right_stuff"></div>
+				</div>
+			</div>
+			<!-- /content -->
+			<!-- footer -->
+			<div data-role="footer" data-position="fixed" data-id="foot">
+				<div data-role="navbar">
+					<ul>			
+						<li><a href="#" data-role="button" data-theme="a" data-icon="info">About</a></li>		
+					</ul>
+				</div>
+			</div>
+			<!-- /footer -->
+		</div>
+		<!-- /page -->
+
+		<!-- Start of first page I -->
+		<div data-role="page" id="page2" data-theme="a">
+			<!-- Header -->
+			<div data-role="header">
+				<a data-rel="back" data-theme="a" data-icon="back">back</a>
+				<h1>Caftan.me</h1>
+				<a href="#page1" data-role="button" data-icon="home" data-iconpos="notext" data-inline="true"></a>				
+			</div>
+			<!-- /header -->
+			<!-- Content    -->
+			<div data-role="content" id="big_wrapper">
+				<h4>Writte your message:</h4>
+				<div id="content_page2">
+					<input type="text" placeholder="Email"/>
+					<input type="text" placeholder="Title"/>
+					<textarea placeholder="Message"></textarea>
+					<a href="#" data-mini="true" data-role="button">Send</a>
+				</div>	
+			</div>
+			<!-- /content -->
+			<!-- footer -->
+			<div data-role="footer" data-position="fixed" data-id="foot">
+				<h4>&copy; 2013 ProBuzzing</h4>
+			</div>
+			<!-- /footer -->
+		</div>
+		<!-- /page -->
+
+
+		<!-- Start of first page I -->
+		<div data-role="page" id="gall" data-theme="a">
+			<!-- Header -->
+			<div data-role="header">
+				<a data-rel="back" data-theme="a" data-icon="back">back</a>
+				<h1>Caftan.me</h1>
+				<a href="#page1" data-role="button" data-icon="home" data-iconpos="notext" data-inline="true"></a>	
+			</div>
+			<!-- /header -->
+			<!-- Content    -->
+			<div data-role="content" id="big_wrapper">
+				<div id="content_page2">
+					<ul data-role="listview" data-inset="true">
+					    <li><a href="#gall-1">
+					        <img src="images/verySmall.png">
+					        <h2>Takchita</h2>
+					        <p>Takchita</p></a>
+					    </li>
+					    <li><a href="#gall-2">
+					        <img src="images/Gandoura.png">
+					        <h2>Gandoura/Abaya</h2>
+					        <p>Gandoura/Abaya</p></a>
+					    </li>
+					    <li><a href="#gall-3">
+					        <img src="images/Jalaba.png">
+					        <h2>Jalaba</h2>
+					        <p>Jalaba</p></a>
+					    </li>
+					</ul>
+				</div>	
+			</div>
+			<!-- /content -->
+			<!-- footer -->
+			<div data-role="footer" data-position="fixed" data-id="foot">
+				<h4>&copy; 2013 ProBuzzing</h4>
+			</div>
+			<!-- /footer -->
+		</div>
+		<!-- /page -->
+
+
+		<!-- Start of first page I -->
+		<div data-role="page" id="gall-1" data-theme="a">
+			<!-- Header -->
+			<div data-role="header">
+				<a data-rel="back" data-theme="a" data-icon="back">back</a>
+				<h1>Caftan.me</h1>
+				<a href="#page1" data-role="button" data-icon="home" data-iconpos="notext" data-inline="true"></a>
+			</div>
+			<!-- /header -->
+			<!-- Content    -->
+			<div data-role="content" id="big_wrapper">
+				<div id="content_page2">
+					<div id="gallery">
+							<a href="images/caftan-1.jpg"><img src="images/caftan-1.jpg" alt="Image 001"/></a>
+							<a href="images/caftan-2.jpg"><img src="images/caftan-2.jpg" alt="Image 001"/></a>
+							<a href="images/caftan-3.jpg"><img src="images/caftan-3.jpg" alt="Image 002" /></a>
+							<a href="images/caftan-4.jpg"><img src="images/caftan-4.jpg" alt="Image 003" /></a>
+							<a href="images/caftan-5.jpg"><img src="images/caftan-5.jpg" alt="Image 004" /></a>
+							<a href="images/caftan-6.jpg"><img src="images/caftan-6.jpg" alt="Image 005" /></a>
+							<a href="images/caftan-7.jpg"><img src="images/caftan-7.jpg" alt="Image 006" /></a>
+							<a href="images/caftan-8.jpg"><img src="images/caftan-8.jpg" alt="Image 007" /></a>			
+ 				</div>
+				</div>	
+			</div>
+			<!-- /content -->
+			<!-- footer -->
+			<div data-role="footer" data-position="fixed" data-id="foot">
+				<h4>&copy; 2013 ProBuzzing</h4>
+			</div>
+			<!-- /footer -->
+		</div>
+		<!-- /page -->
+
+		<!-- Start of first page I -->
+		<div data-role="page" id="gall-2" data-theme="a">
+			<!-- Header -->
+			<div data-role="header">
+				<a data-rel="back" data-theme="a" data-icon="back">back</a>
+				<h1>Caftan.me</h1>
+				<a href="#page1" data-role="button" data-icon="home" data-iconpos="notext" data-inline="true"></a>
+			</div>
+			<!-- /header -->
+			<!-- Content    -->
+			<div data-role="content" id="big_wrapper">
+				<div id="content_page2">
+					<div class="thumbs">
+				        <a href="images/small-1.png" style="background-image:url('images/small-1.png')" ></a>
+				        <a href="images/small-2.png" style="background-image:url('images/small-2.png')" ></a>
+				        <a href="images/small-3.png" style="background-image:url('images/small-3.png')" ></a>
+						<a href="images/pic1.png" style="background-image:url('images/pic1.png')" ></a>
+						<a href="images/pic2.png" style="background-image:url('images/pic2.png')" ></a>
+						<a href="images/pic3.png" style="background-image:url('images/pic3.png')" ></a>
+						<a href="images/pic4.png" style="background-image:url('images/pic4.png')" ></a>
+						<a href="images/pic5.png" style="background-image:url('images/pic5.png')" ></a>
+						<a href="images/pic6.png" style="background-image:url('images/pic6.png')" ></a>
+						<a href="images/pic7.png" style="background-image:url('images/pic7.png')" ></a>
+						<a href="images/pic8.png" style="background-image:url('images/pic8.png')" ></a>
+						<a href="images/pic9.png" style="background-image:url('images/pic9.png')" ></a>
+						<a href="images/pic10.png" style="background-image:url('images/pic10.png')" ></a>
+				    </div>
+				</div>	
+			</div>
+			<!-- /content -->
+			<!-- footer -->
+			<div data-role="footer" data-position="fixed" data-id="foot">
+				<h4>&copy; 2013 ProBuzzing</h4>
+			</div>
+			<!-- /footer -->
+		</div>
+		<!-- /page -->
+
+		<!-- Start of first page I -->
+		<div data-role="page" id="gall-3" data-theme="a">
+			<!-- Header -->
+			<div data-role="header">
+				<a data-rel="back" data-theme="a" data-icon="back">back</a>
+				<h1>Caftan.me</h1>
+				<a href="#page1" data-role="button" data-icon="home" data-iconpos="notext" data-inline="true"></a>
+			</div>
+			<!-- /header -->
+			<!-- Content    -->
+			<div data-role="content" id="big_wrapper">
+				<div id="content_page2">
+					<div class="thumbs">
+				        <a href="images/small-1.png" style="background-image:url('images/small-1.png')" ></a>
+				        <a href="images/small-2.png" style="background-image:url('images/small-2.png')" ></a>
+				        <a href="images/small-3.png" style="background-image:url('images/small-3.png')" ></a>
+						<a href="images/pic1.png" style="background-image:url('images/pic1.png')" ></a>
+						<a href="images/pic2.png" style="background-image:url('images/pic2.png')" ></a>
+						<a href="images/pic3.png" style="background-image:url('images/pic3.png')" ></a>
+						<a href="images/pic4.png" style="background-image:url('images/pic4.png')" ></a>
+						<a href="images/pic5.png" style="background-image:url('images/pic5.png')" ></a>
+						<a href="images/pic6.png" style="background-image:url('images/pic6.png')" ></a>
+						<a href="images/pic7.png" style="background-image:url('images/pic7.png')" ></a>
+						<a href="images/pic8.png" style="background-image:url('images/pic8.png')" ></a>
+						<a href="images/pic9.png" style="background-image:url('images/pic9.png')" ></a>
+						<a href="images/pic10.png" style="background-image:url('images/pic10.png')" ></a>
+				    </div>
+				</div>	
+			</div>
+			<!-- /content -->
+			<!-- footer -->
+			<div data-role="footer" data-position="fixed" data-id="foot">
+				<h4>&copy; 2013 ProBuzzing</h4>
+			</div>
+			<!-- /footer -->
+		</div>
+		<!-- /page -->
+
+		<!-- Start of first page I -->
+		<div data-role="page" id="testcaf" data-theme="a">
+			<!-- Header -->
+			<div data-role="header">
+				<a data-rel="back" data-theme="a" data-icon="back">back</a>
+				<h1>Caftan.me</h1>
+				<a href="#page1" data-role="button" data-icon="home" data-iconpos="notext" data-inline="true"></a>
+			</div>
+			<!-- /header -->
+			<!-- Content    -->
+			<div data-role="content" id="big_wrapper">
+				<div id="content_page2">
+					<img class="shape" src="images/big-2.png" />
+				</div>	
+			</div>
+			<!-- /content -->
+			<!-- footer -->
+			<div data-role="footer" data-position="fixed" data-id="foot">
+				<h4>&copy; 2013 ProBuzzing</h4>
+			</div>
+			<!-- /footer -->
+		</div>
+		<!-- /page -->
+	</body>
+</html>
